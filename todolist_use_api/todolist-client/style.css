@@ -1,0 +1,34 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  width: 50%;
+}
+
+.task-list {
+  margin-top: 10px;
+  border: 1px solid black;
+}
+
+textarea {
+  resize: none;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-group {
+  margin-top: 50px;
+}
+
+p {
+  cursor: pointer;
+}
+
+.checked {
+  text-decoration: line-through;
+  user-select: none;
+}

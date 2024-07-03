@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form">
+        <input type="text" name="" id="task" />
+        <input type="button" value="add task" id="add-task" disabled />
+        <input type="button" value="clear task" id="clear-task" />
+      </div>
+      <div class="search-group">
+        <input type="text" placeholder="search..." id="search" />
+        <select name="" id="filter">
+          <option value="0">All</option>
+          <option value="1">Done</option>
+          <option value="-1">Not done</option>
+        </select>
+      </div>
+      <div class="task-list" id="task-list"></div>
+    </div>
+    <div id="pagination"></div>
+    <script src="./index.js"></script>
+  </body>
+</html>
