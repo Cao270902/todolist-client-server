@@ -93,16 +93,6 @@ window.onload = async function () {
       //     deleteTask(taskId);
       //   };
       // });
-      async function deleteTask(taskId) {
-        try {
-          await fetch(`http://localhost:3000/tasks/${taskId}`, {
-            method: "DELETE",
-          });
-        } catch (error) {
-          console.error("Error deleting task:", error);
-          alert("Xóa công việc thất bại. Vui lòng thử lại.");
-        }
-      }
 
       deleteBtns.forEach(function (btn) {
         btn.onclick = async function () {
@@ -151,18 +141,28 @@ window.onload = async function () {
     editTaskId = taskId;
   }
 
-  function deleteTask(taskId) {
-    var taskIndex = tasks.findIndex(function (task) {
-      return task.id === taskId;
-    });
+  // function deleteTask(taskId) {
+  //   var taskIndex = tasks.findIndex(function (task) {
+  //     return task.id === taskId;
+  //   });
 
-    if (taskIndex !== -1) {
-      tasks.splice(taskIndex, 1);
+  //   if (taskIndex !== -1) {
+  //     tasks.splice(taskIndex, 1);
+  //   }
+
+  //   // filterTasks(); //
+  //   renderTasks();
+  //   setTask(tasks);
+  // }
+  async function deleteTask(taskId) {
+    try {
+      await fetch(`http://localhost:3000/tasks/${taskId}`, {
+        method: "DELETE",
+      });
+    } catch (error) {
+      console.error("Error deleting task:", error);
+      alert("Xóa công việc thất bại. Vui lòng thử lại.");
     }
-
-    // filterTasks(); //
-    renderTasks();
-    setTask(tasks);
   }
 
   // function handleCheck(taskId) {
